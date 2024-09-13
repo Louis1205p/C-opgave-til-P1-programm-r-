@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double tal1 = 1;
+        double tal2 = 2;
+        double tal3 = 3;
+        double tal4 = 4;
+        double tal5 = 5;
+        double tal6 = 6;
+
+
+        Console.Write("Indtast et tal (1-6): ");
+        double brugerTal = Convert.ToDouble(Console.ReadLine());
+
+        switch (brugerTal)
+        {
+            case 1:
+                Console.WriteLine("Du har valgt tal 1");
+                break;
+            case 2:
+                Console.WriteLine("Du har valgt tal 2");
+                break;
+            case 3:
+                Console.WriteLine("Du har valgt tal 3");
+                break;
+            case 4:
+                Console.WriteLine("Tillykke du har vundet");
+                break;
+            case 5:
+                Console.WriteLine("Du har valgt tal 5");
+                break;
+            case 6:
+                Console.WriteLine("Du har valgt tal 6");
+                break;
+            default:
+                Console.WriteLine("FORKERT PRØV IGEN");
+                break;
+        }
+    }
+}

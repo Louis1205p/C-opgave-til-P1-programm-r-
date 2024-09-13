@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            int result = i * 4;
+
+            if (result == 16)
+            {
+                continue;
+            }
+            Console.WriteLine(result);
+
+        }
+        Console.WriteLine("Loopen er nu stoppet");
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // giver variablerne værdier
+        string korrektNavn = "Louis";
+        string korrektBrugernavn = "Louis123";
+        string korrektPassword = "1234";
+
+        // brugeren skal indtaste oplysninger
+        Console.Write("indtast dit navn ");
+        string navn = Console.ReadLine();
+
+        Console.Write("indtast dit brugernavn ");
+        string brugernavn = Console.ReadLine();
+
+        Console.Write("indtast dit password ");
+        string password = Console.ReadLine();
+
+        {
+            // 3. Kontrollere brugernavn, password og navn 
+            if (brugernavn == korrektBrugernavn && password == korrektPassword)
+            {
+                Console.WriteLine("Velkommen " + korrektNavn);
+            }
+            else 
+            {
+                Console.WriteLine("brugernavn eller password er forkert"); //hvis en af de tre er forkerte
+            }
+
+        }   
+
+        
+    }
+}

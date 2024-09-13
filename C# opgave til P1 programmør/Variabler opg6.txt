@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {   // giver variablerne værdier
+        Console.Write("Indtast radius af cirklen ");
+        string radiusInput = Console.ReadLine();
+
+        //laver radius om til en double
+        double radius;
+        bool succes = double.TryParse(radiusInput, out radius);
+
+        // 
+
+        //bruger en if else hvis input ikke er gyldigt, så skriver jeg også formlen for udregningen
+        if (succes ) 
+        
+        {
+
+            double areal = Math.PI * Math.Pow(radius, 2);
+            Console.WriteLine("Radius af cirklen er  " + areal);
+        }
+        else 
+        {
+            Console.WriteLine("Ugyldigt input prøv igen");
+        }
+    }
+}

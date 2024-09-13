@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indtast din indkomst: ");
+        double indkomst = Convert.ToDouble(Console.ReadLine());
+
+        double skat = 0.0;
+        double bundskat = 0.0;
+        double mellemskat = 0.0;
+        double topskat = 0.0;
+
+        if (indkomst >= 42000 && indkomst < 280000)
+        {
+            bundskat = indkomst * 0.30;
+        }
+        else if ((indkomst >= 280000 && indkomst < 390000) || indkomst >= 390000)
+        {
+            bundskat = indkomst * 0.30;
+            mellemskat = indkomst * 0.06;
+
+            if (indkomst >= 390000)
+            {
+                topskat = indkomst * 0.15;
+            }
+        }
+
+        skat = bundskat + mellemskat + topskat;
+
+        Console.WriteLine("Din skat er " + skat + " kr.");
+    }
+}

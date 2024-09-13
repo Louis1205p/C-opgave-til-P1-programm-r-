@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indtast det beløb du vil se rente på: ");
+        double beloeb = Convert.ToDouble(Console.ReadLine());
+
+        double rente = 0.0;
+
+        if (beloeb < 25000)
+        {
+            rente = beloeb * 0.25 / 100;
+        }
+        else if (beloeb >= 25000 && beloeb <= 150000)
+        {
+            rente = beloeb * 1.25 / 100;
+        }
+        else if (beloeb > 150000 || beloeb == 150000)
+        {
+            rente = (150000 * 1.25 / 100) + ((beloeb - 150000) * 0.5 / 100);
+        }
+        Console.WriteLine("Renten er " + rente.ToString("F2") + " kr.");
+    }
+}

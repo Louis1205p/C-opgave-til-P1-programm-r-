@@ -1,0 +1,51 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indtast rammens bredde: ");
+        int width = int.Parse(Console.ReadLine());
+
+        Console.Write("Indtast rammens højde: ");
+        int height = int.Parse(Console.ReadLine());
+
+        int startX = 20;
+        int startY = 4;
+        int endX = startX + width - 1;
+        int endY = startY + height - 1;
+
+        Console.Write("Indtast dit navn: ");
+        string name = Console.ReadLine();
+
+        for (int x = startX; x <= endX; x++)
+        {
+            Console.SetCursorPosition(x, startY);
+            Console.Write("c");
+            Console.SetCursorPosition(x, endY);
+            Console.Write("c");
+        }
+
+        for (int y = startY; y <= endY; y++)
+        {
+            Console.SetCursorPosition(startX, y);
+            Console.Write("u");
+            Console.SetCursorPosition(endX, y);
+            Console.Write("u");
+        }
+
+        int textWidth = name.Length;
+        int middleX = (startX + endX) / 2;
+        int middleY = (startY + endY) / 2;
+
+        int adjustedX = middleX - textWidth / 2;
+
+        if (adjustedX < startX) adjustedX = startX;
+        if (adjustedX + textWidth > endX) adjustedX = endX - textWidth;
+
+        Console.SetCursorPosition(adjustedX, middleY);
+        Console.Write(name);
+
+        Console.SetCursorPosition(0, endY + 2);
+    }
+}

@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // brugeren skal indtaste sin alder
+        Console.Write("Indtast din alder: ");
+
+        // 2. Læs brugerens input
+        int alder;
+        if (int.TryParse(Console.ReadLine(), out alder))
+        {
+            // 3. Kontrollere alderen 
+            if (alder > 60)
+            {
+                Console.WriteLine("Du er for gammel.");
+            }
+            else if (alder < 50)
+            {
+                Console.WriteLine("Du er ikke for gammel.");
+            }
+             else
+            {
+                Console.WriteLine("Du er hverken for gammel eller for ung.");
+            }
+        }   
+
+        
+    }
+}

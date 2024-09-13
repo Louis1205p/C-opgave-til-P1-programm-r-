@@ -1,0 +1,12 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 10; i++) // i er 1, som blir ganget med 7 som så kører 10 gange så den ender på 70
+        { 
+            Console.WriteLine(i * 7); 
+        }
+    }
+}

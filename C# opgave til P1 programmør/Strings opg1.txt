@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // varaiablerne får værdier
+        int tal1 = 10;
+        string tal2;
+        double tal3;
+
+        // bruger division til at få outputtet til at være decimal
+        double decimaltal = tal1 / 4.0; //  
+        tal2 = "1.2"; // Skal være en tekststreng
+        tal3 = 1.3; // Skal være et decimaltal
+
+        Console.WriteLine("int: " + decimaltal);
+        Console.WriteLine("string: " + tal2);
+        Console.WriteLine("double: " + tal3);
+    }
+}
+//hvis jeg har misforstået opgaven og det kun er double der skal være decimaltalvil vil jeg ændrer tal 2 til "hello" og tal 3 til 1.33 og tal 1 til 5

@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // varaiablerne får værdier
+        string idag;
+
+        idag = "I dag har vi den 24. December.";
+
+        Console.WriteLine(idag);
+    }
+}

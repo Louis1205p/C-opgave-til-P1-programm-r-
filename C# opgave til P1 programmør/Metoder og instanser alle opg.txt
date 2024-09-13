@@ -1,0 +1,80 @@
+Program.cs ------------------
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Bog SherlockHolmes = new Bog();
+
+        SherlockHolmes.SetPris(150);
+        SherlockHolmes.SetTitel("Sherlock Holmes");
+
+        SherlockHolmes.PrintInfo();
+        Console.WriteLine($"{SherlockHolmes.GetTitel()} - koster {SherlockHolmes.GetPris()} kr.");
+
+        bool kanKøbe = SherlockHolmes.HarRåd(200);
+        if (kanKøbe)
+        {
+            Console.WriteLine("Jeg har råd.");
+        }
+        else
+        {
+            Console.WriteLine("Jeg har desværre ikke råd.");
+        }
+
+        kanKøbe = SherlockHolmes.HarRåd(100);
+        if (kanKøbe)
+        {
+            Console.WriteLine("Jeg har råd.");
+        }
+        else
+        {
+            Console.WriteLine("Jeg har desværre ikke råd.");
+        }
+    }
+}
+
+
+Bog.cs ----------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class Bog
+{
+    private int pris;
+    private string titel;
+
+    public void PrintInfo()
+    {
+        Console.WriteLine("Jeg er en bog.");
+    }
+
+    public bool HarRåd(int penge)
+    {
+        return penge >= this.pris;
+    }
+
+    public void SetPris(int pris)
+    {
+        this.pris = pris;
+    }
+
+    public int GetPris()
+    {
+        return this.pris;
+    }
+
+    public void SetTitel(string titel)
+    {
+        this.titel = titel;
+    }
+
+    public string GetTitel()
+    {
+        return this.titel;
+    }
+}

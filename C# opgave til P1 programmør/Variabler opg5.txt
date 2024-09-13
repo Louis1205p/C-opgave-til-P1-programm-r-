@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {   // gemmer "navn" og "alder i string og laver 2 sætninger
+        Console.Write("Indtast dit navn ");
+        string navn = Console.ReadLine();
+
+        Console.Write("Indtast din alder ");
+        string alder = Console.ReadLine();
+
+        // Udskriver værdierne
+        Console.WriteLine("Jeg hedder " + navn + " og er " + alder + " år gammel.");
+
+    }
+}

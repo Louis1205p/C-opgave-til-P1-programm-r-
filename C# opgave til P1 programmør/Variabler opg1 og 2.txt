@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // giver navnene tal1 og tal2.
+        int tal1, tal2;
+
+        // 2. Giver værdierne, tal1 = 5 og tal2 = 3.
+        tal1 = 5;
+        tal2 = 3;
+
+        // 3. Udskriver tallene på 2 linjer.
+        Console.WriteLine("tal2 er " + tal1);
+        Console.WriteLine("tal2 er " + tal2);
+    }
+}

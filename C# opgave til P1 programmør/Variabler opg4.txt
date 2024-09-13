@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {   // giver variablerne værdier
+        double kagePris;
+        double ølPris;
+        double pølsePris;
+
+        // Giver værdierne til variablerne
+        kagePris = 23.56;
+        ølPris = 34.67;
+        pølsePris = 65.34;
+
+        // Udskriv værdierne
+        Console.WriteLine("Kage " + kagePris);
+        Console.WriteLine("Øl " + ølPris);
+        Console.WriteLine("Pølse " + pølsePris);
+    }
+}

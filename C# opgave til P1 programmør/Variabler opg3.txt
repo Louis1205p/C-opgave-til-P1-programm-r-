@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string Navn; //giver variablerne værdier
+        int Alder;
+        double Penge;
+
+        // Giver værdierne til variablerne.
+        Navn = "Søren";
+        Alder = 16;
+        Penge = 1234.34;
+
+        // 3. Udskriver tallene på 2 linjer.
+        Console.WriteLine("Jeg hedder " + Navn + ", er " + Alder + " år gammel og har tjent " + Penge + "kr. på at lappe cykler ");
+
+    }
+}

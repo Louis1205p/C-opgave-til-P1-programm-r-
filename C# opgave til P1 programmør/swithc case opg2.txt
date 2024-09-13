@@ -1,0 +1,50 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // her har jeg bruge writeline til menuen
+        Console.WriteLine("Isbjørn");
+        Console.WriteLine("Champagnebrus");
+        Console.WriteLine("Tequila Sunrise");
+        Console.WriteLine("Mojito");
+        Console.WriteLine("Brandbil");
+        Console.WriteLine("Filur");
+
+        // her bliver brugerens input gemt i double variablen
+        Console.Write("Indtast det tilsvarende tal (1-6): ");
+        double brugerTal = Convert.ToDouble(Console.ReadLine());
+
+        // her blir der brugt en switch som gør at den knap du trykker på sker handlingen vist under
+        switch (brugerTal)
+        {
+            case 1:
+                Console.Write("Du valgte Isbjørn");
+
+                break;
+            case 2:
+                Console.Write("Du valgte Champagnebrus");
+
+                break;
+            case 3:
+                Console.Write("Du valgte Tequila Sunrise");
+
+                break;
+            case 4:
+                Console.Write("Du valgte Mojito");
+
+                break;
+            case 5:
+                Console.Write("Du valgte Brandbil");
+                break;
+            case 6:
+                Console.Write("Du valgte Filur");
+
+                break;
+            default:
+                Console.WriteLine("FORKERT PRØV IGEN"); // hvis man er dum
+                break;
+        }
+    }
+}

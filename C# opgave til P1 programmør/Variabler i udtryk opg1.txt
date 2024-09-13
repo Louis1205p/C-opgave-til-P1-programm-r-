@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // eklærer varibalerne 
+        int int1;
+        int int2;
+        int int3;
+
+        int result;
+	//giver værdier til variablerne
+        int1 = 23;
+        int2 = 12;
+        int3 = 13;
+
+        result = (int1 + int2) * int3;
+
+        Console.WriteLine("result = " + result);
+
+    }
+}

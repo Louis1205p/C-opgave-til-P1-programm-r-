@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indtast antal kilomete ");
+        double antalKilometer = Convert.ToDouble(Console.ReadLine());
+
+        double fradrag = 0.0;
+
+        if ((antalKilometer > 24 && antalKilometer <= 100) || antalKilometer > 100) // && og || er operatorer som gør at kun hvis betingelsen er sand gør den koden
+        {
+            if (antalKilometer > 24 && antalKilometer <= 100)
+            {
+                fradrag += fradrag + (antalKilometer - 24) * 1.54;
+            }
+            if (antalKilometer > 100)
+            {
+                fradrag += fradrag + (100 - 24) * 1.54; 
+                fradrag += (antalKilometer - 100) * 0.77; 
+            }
+        }
+
+        Console.WriteLine("Dit befordringsfradrag er: " + fradrag + " DANSKE KRONER");
+    }
+}

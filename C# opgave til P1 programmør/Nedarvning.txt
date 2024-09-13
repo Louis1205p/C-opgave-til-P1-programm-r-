@@ -1,0 +1,113 @@
+PROGRAM.cs
+
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Chair myChair = new Chair("Plastik", "Blå", 199.99, false);
+            Computer myComputer = new Computer("Aluminium", "Sølv", 7999.99, "intel i7");
+
+            Console.WriteLine("Stolen:");
+            myChair.PrintInfo();
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Computeren:");
+            myComputer.PrintInfo();
+        }
+
+    }
+
+}
+
+Furniture.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class Furniture
+    {
+        public string Materiale { get; set; }
+        public string Farve { get; set; }
+        public double Pris { get; set; }
+
+        public Furniture(string materiale, string farve, double pris)
+        {
+            Materiale = materiale;
+            Farve = farve;
+            Pris = pris;
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Materiale: {Materiale}, Farve: {Farve}, Pris: {Pris}");
+        }
+
+    }
+}
+
+Chair.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class Chair : Furniture
+    {
+        public bool HarArmlæn {  get; set; }
+
+        public Chair(string materiale, string farve, double pris, bool harArmlæn)
+        : base(materiale, farve, pris) 
+        { 
+            HarArmlæn = harArmlæn;
+        }
+
+        public new void PrintInfo()
+        {
+            base.PrintInfo();
+            Console.WriteLine($"Har Armlæn: {HarArmlæn}");
+        }
+      
+    }
+}
+
+Computer.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class Computer : Furniture
+    {
+        public string Processor { get; set; }
+
+        public Computer(string materiale, string farve, double pris, string processor)
+            : base(materiale, farve, pris)
+        {
+            Processor = processor;
+        }
+
+        public new void PrintInfo()
+        {
+            base.PrintInfo();
+            Console.WriteLine($"Processor: {Processor}");
+        }
+    }
+}

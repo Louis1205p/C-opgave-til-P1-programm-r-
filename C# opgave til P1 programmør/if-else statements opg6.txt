@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //spørger brugeren
+        Console.Write("Hvor mange kilometer kører du hver dag til og fra arbejde? ");
+        double kmPerDag = Convert.ToDouble(Console.ReadLine());
+
+        double fradrag = 0;
+
+        if (kmPerDag < 25) // 24 km eller mindre (skulle måske ha brugt en <=
+        {
+            Console.WriteLine("Du får ikke noget fradrag.");
+        }
+        else if (kmPerDag < 121)
+        {
+            fradrag = (kmPerDag - 24) * 1.93;
+            Console.WriteLine("Dit fradrag er " + fradrag.ToString("F2") + " kr. pr. dag.");
+        }
+        else
+        {
+            fradrag = 96 * 1.93 + (kmPerDag - 120) * 0.97;
+            Console.WriteLine("Dit fradrag er " + fradrag.ToString("F2") + " kr. pr. dag."); // F2 gør at der kun kommer 2 decimaler som er bedst når vi snakker om penge
+        }
+    }
+}

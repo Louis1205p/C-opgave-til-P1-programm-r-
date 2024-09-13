@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {   //erklærer variablerne
+        double tal1;
+        string tekst1;
+        string tekst2;
+
+        //giver variablerne værdier
+        tal1 = 200.50;
+        tekst1 = "Jeg har ";
+        tekst2 = " kr. i banken";
+
+        //udskriver det
+        Console.WriteLine("" + tekst1 + tal1 + tekst2);
+    }
+}

@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // erklærer variablerne
+        int int1 = 23;
+        int int2 = 12;
+        int int3 = 13;
+
+        int result;
+
+        // beregninger 
+        result = (int1 + int2) * int3;
+        Console.WriteLine("Resultatet af (int1 + int2) * int3 = " + result);
+
+        // blander variabler og tal
+        int mix1 = int1 + 5;
+        int mix2 = int2 * 2;
+        int mix3 = int3 - 7;
+        int mix4 = int1 % int2;   
+
+        // resultaterne af blandede udtryk
+        Console.WriteLine("int1 + 5 = " + mix1);
+        Console.WriteLine("int2 * 2 = " + mix2);
+        Console.WriteLine("int3 - 7 = " + mix3);
+        Console.WriteLine("int1 % int2 = " + mix4);
+
+    }
+}

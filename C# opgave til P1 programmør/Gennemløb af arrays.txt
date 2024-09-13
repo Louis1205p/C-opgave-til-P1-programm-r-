@@ -1,0 +1,40 @@
+using System;
+
+public class ArrayExample
+{
+    public static void Main(string[] args)
+    {
+        // array med 6 valgfrie heltal
+        int[] numbers = { 5, 10, 15, 20, 25, 30 };
+
+        // summen af array-elementerne med en for-loop
+        int sum = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += numbers[i];
+        }
+
+        // summen af alle elementerne
+        Console.WriteLine("Summen af elementerne i tal-arrayet: " + sum);
+    }
+}
+
+5 strings:
+
+using System;
+
+public class StringArrayExample
+{
+    public static void Main(string[] args)
+    {
+        // string-array med 5 strenge
+        string[] words = { "Æble", "Banan", "Appelsin", "Pære", "Drue" };
+
+        Console.WriteLine("String array indeholder:");
+        for (int i = 0; i < words.Length; i++)
+        {
+            Console.WriteLine(words[i]);
+        }
+    }
+}
+

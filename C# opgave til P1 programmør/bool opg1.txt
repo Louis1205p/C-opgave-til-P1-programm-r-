@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // erklærer variablerne
+        int var1 = 23;
+        int var2 = 12;
+
+	// giver værdien var1 > var
+        bool erVar1StørreEndVar2 = var1 > var2;
+
+        Console.WriteLine(" er var1 større end var2? " + erVar1StørreEndVar2);
+	
+	// ændrer på var1 så det bliver false
+        var1 = 11;
+        erVar1StørreEndVar2 = var1 > var2;
+
+        Console.WriteLine(" er var1 større end var2? " + erVar1StørreEndVar2);
+
+    }
+}

@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int startX = 20;
+        int startY = 4;
+        int endX = 30;
+        int endY = 8;
+
+        for (int x = startX; x <= endX; x++)
+        {
+            Console.SetCursorPosition(x, startY);
+            Console.Write("c");
+            Console.SetCursorPosition(x, endY);
+            Console.Write("c");
+        }
+
+
+        for (int y = startY; y <= endY; y++)
+        {
+            Console.SetCursorPosition(startX, y);
+            Console.Write("u");
+            Console.SetCursorPosition(endX, y);
+            Console.Write("u");
+        }
+
+        string name = "Louis"; 
+        int textWidth = name.Length;
+        int middleX = (startX + endX) / 2;
+        int middleY = (startY + endY) / 2;
+
+        int adjustedX = middleX - textWidth / 2;
+
+        if (adjustedX < startX) adjustedX = startX;
+        if (adjustedX + textWidth > endX) adjustedX = endX - textWidth;
+
+        Console.SetCursorPosition(adjustedX, middleY);
+        Console.Write(name);
+
+        Console.SetCursorPosition(0, endY + 2);
+    }
+}

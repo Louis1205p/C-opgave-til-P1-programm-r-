@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //Erklær variablerne
+        int tal1 = 42;
+        int tal2 = 64;
+
+        // beregner resultatet
+        int result = tal1 + tal2;
+
+        // Tjek resultatet og udskriver besked
+        if (result > 100)
+        {
+            Console.WriteLine("Summen er større end 100!");
+        }
+        else if (result < 100)
+        {
+            Console.WriteLine("Summen er mindre end 100.");
+        }
+        else
+        {
+            Console.WriteLine("Summen er 100"); // hvis summen ikke er større eller mindre end 100 
+        }
+    }
+}

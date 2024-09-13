@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {   
+        // Beregningerne gemmes i variabler
+        int resultat1 = 2 + 1 * 2;    // Resultat: 4
+        int resultat2 = (2 + 1) * 2;// Resultat: 6
+        double resultat3 = 5 / 2.0;// Resultat: 2.5
+        int resultat4 = 8 % 3; // Resultat: 2
+        int resultat5 = 1 - 5;// Resultat: -4
+
+        // Udskrivning af resultaterne
+        Console.WriteLine("2 + 1 * 2 = " + resultat1);
+        Console.WriteLine("(2 + 1) * 2 = " + resultat2);
+        Console.WriteLine("5 / 2 = " + resultat3);
+        Console.WriteLine("8 % 3 = " + resultat4);
+        Console.WriteLine("1 - 5 = " + resultat5);
+    }
+}

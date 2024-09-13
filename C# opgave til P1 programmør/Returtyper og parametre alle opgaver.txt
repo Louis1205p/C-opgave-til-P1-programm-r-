@@ -1,0 +1,76 @@
+
+Bil.cs- ---------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    public class Bil
+    {
+        private double gasTank = 10.0;
+
+        public void StartMotor()
+        {
+            Console.WriteLine("Motoren er startet.");
+        }
+
+        public void StopMotor()
+        {
+            Console.WriteLine("Motoren er slukket.");
+        }
+
+        public void FillGas(double liters, bool isDiesel)
+        {
+            Console.WriteLine($"Filled tank with: {liters} liters");
+            gasTank += liters; // Opdaterer gasniveauet
+        }
+
+        public double RemainingGas()
+        {
+            return gasTank;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+---------------------------- Program.cs
+
+using ConsoleApp3;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Bil minBil = new Bil();
+
+        minBil.StartMotor();
+        minBil.StopMotor();
+
+        double liters = 2.5;
+
+        minBil.FillGas(liters, true);
+
+        double remaining = minBil.RemainingGas();
+        Console.WriteLine($"Remaining gas: {remaining} liters");
+
+        Console.WriteLine($"Remaining gas: {minBil.RemainingGas()} liters");
+    }
+}
+
+
+
+
+
